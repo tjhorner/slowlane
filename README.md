@@ -2,7 +2,7 @@
 
 Slowlane is a simple script that imitates a (what could be in the future)
 ISP "package upgrade" page. This was made for the Battle for the Net July 12th
-protest. It adapts to the user's ISP, if possible.
+protest. It adapts to the user's ISP, if possible. ([demo!](https://tjhorner.com/slowlane/))
 
 ![](https://i.imgur.com/QZQYDsT.png)
 
@@ -13,6 +13,11 @@ You can add it to your site like this:
 ```html
 <script src="https://tjhorner.com/slowlane/widget.js" async></script>
 ```
+
+The notice will display on July 12th, but you can test it by adding
+`#slowlanedebug` to the end of your URL. It will also only display
+once, and will never show again after the user clicks the "just take
+me to the site I was going to" link
 
 # License
 
