@@ -1,0 +1,93 @@
+body {
+  color: #383838;
+}
+
+.slowlane {
+  max-width: 900px;
+  font-size: 1.4em;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  display: none;
+  line-height: 32px;
+}
+
+.logo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: auto 50px;
+}
+
+.upgrade, .header {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.4em;
+}
+
+.packages {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: none;
+}
+
+.package {
+  box-sizing: border-box;
+  padding: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.buy {
+  padding: 10px;
+  text-align: center;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+}
+
+.fightforthenet {
+  font-family: Arial, Helvetica, sans-serif;
+  display: none;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-top: 100px;
+  font-size: 2em;
+}
+
+.description {
+  font-size: 1.5em;
+  line-height: 32px;
+}
+
+.cta {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  background: #ff3434;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+  font-size: 2em;
+  border-radius: 3px;
+}
+
+.close {
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+  color: gray;
+}

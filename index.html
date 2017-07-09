@@ -1,0 +1,148 @@
+<html>
+  <head>
+    <title>You're stuck in the slow lane!</title>
+
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="slowlane.js"></script>
+
+    <!-- RGS -->
+    <style>
+      /*  SECTIONS  */
+      .section {
+        clear: both;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      /*  COLUMN SETUP  */
+      .col {
+        display: block;
+        float:left;
+        margin: 1% 0 1% 1.6%;
+      }
+      .col:first-child { margin-left: 0; }
+
+      /*  GROUPING  */
+      .group:before,
+      .group:after { content:""; display:table; }
+      .group:after { clear:both;}
+      .group { zoom:1; /* For IE 6/7 */ }
+
+      /*  GRID OF THREE  */
+      .span_3_of_3 { width: 100%; }
+      .span_2_of_3 { width: 66.13%; }
+      .span_1_of_3 { width: 32.26%; }
+
+      /*  GO FULL WIDTH BELOW 480 PIXELS */
+      @media only screen and (max-width: 480px) {
+        .col {  margin: 1% 0 1% 0%; }
+        .span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+      }
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="slowlane">
+      <div class="logo"></div>
+
+      <div class="upgrade brand-color">
+        This website is not covered by your current {{service}} package!
+      </div>
+
+      <div class="instructions">
+        To access this website, you must upgrade your {{service}} account to the
+        <strong>Entertainment+ Package</strong> or higher. You are currently on
+        the <strong>Standard Package</strong>, which grants you access to websites
+        such as Google, Wikipedia, and Facebook. Our <strong>Entertainment+ Package</strong>
+        will grant you access to this site, <em>and others such as</em> Netflix, YouTube,
+        Hulu, and more! Select an upgrade option below to proceed.
+      </div>
+    </div>
+
+    <div class="packages">
+      <div class="section group">
+        <div class="col package span_1_of_3">
+          <div class="title">
+            Standard+
+          </div>
+
+          <p>
+            All from Standard as well as...
+          </p>
+
+          <ul>
+            <li>Twitter</li>
+            <li>Instagram</li>
+            <li>Snapchat</li>
+          </ul>
+
+          <div class="buy">
+            Upgrade for $9.99/mo
+          </div>
+        </div>
+
+        <div class="col package span_1_of_3">
+          <div class="title">
+            Entertainment
+          </div>
+
+          <p>
+            All from Standard+ as well as...
+          </p>
+
+          <ul>
+            <li>YouTube</li>
+            <li>Vimeo</li>
+            <li>Dailymotion</li>
+          </ul>
+
+          <div class="buy">
+            Upgrade for $19.99/mo
+          </div>
+        </div>
+
+        <div class="col package span_1_of_3">
+          <div class="title">
+            Entertainment+
+          </div>
+
+          <p>
+            All from Entertainment as well as...
+          </p>
+
+          <ul>
+            <li>Netflix</li>
+            <li>Hulu</li>
+            <li>Many other streaming services</li>
+          </ul>
+
+          <div class="buy">
+            Upgrade for $49.99/mo
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fightforthenet">
+      <div class="header">
+        This is what the internet could be like if net neutrality is destroyed.
+      </div>
+
+      <div class="description">
+        The FCC wants to destroy net neutrality and give big cable companies
+        control over what we see and do online. If they get their way, they'll
+        allow widespread throttling, blocking, censorship, and extra fees. <strong>On
+        July 12th, the Internet will come together to stop them.</strong>
+      </div>
+
+      <a href="https://www.battleforthenet.com/july12/" class="cta">
+        Join the Battle for the Net
+      </a>
+
+      <a href="javascript:close()" class="close">
+        just take me to the site I was going to
+      </a>
+    </div>
+  </body>
+</html>
