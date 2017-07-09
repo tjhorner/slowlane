@@ -166,23 +166,29 @@ var getIsp = orgString => {
   }
 }
 
+var show = isp => {
+  $(".slowlane").html($(".slowlane").html().replace(/{{service}}/g, isp.details.name))
+  $(".slowlane, .packages").fadeIn()
+  $(".logo").css("background-image", `url(img/logos/${isp.id}.png)`)
+  $(".brand-color, strong").css("color", "#" + isp.details.color)
+  $(".package").css("border-color", "#" + isp.details.color)
+  $(".package").css("box-shadow", `0px 0px 11px #${isp.details.color}`)
+  $(".buy").css("background", "#" + isp.details.color)
+
+  $("body").one("click", () => {
+    $(".slowlane, .packages").hide()
+    $(".fightforthenet").show()
+  })
+}
+
 var close = () => parent.postMessage("slowlane-close", "*")
 
 $(document).ready(() => {
-  $.getJSON("https://ipinfo.io", res => {
-    var isp = getIsp(res.org)
-
-    $(".slowlane").html($(".slowlane").html().replace(/{{service}}/g, isp.details.name))
-    $(".slowlane, .packages").fadeIn()
-    $(".logo").css("background-image", `url(img/logos/${isp.id}.png)`)
-    $(".brand-color, strong").css("color", "#" + isp.details.color)
-    $(".package").css("border-color", "#" + isp.details.color)
-    $(".package").css("box-shadow", `0px 0px 11px #${isp.details.color}`)
-    $(".buy").css("background", "#" + isp.details.color)
-
-    $("body").one("click", () => {
-      $(".slowlane, .packages").hide()
-      $(".fightforthenet").show()
+  $.getJSON("https://ipinfo.io")
+    .done(res => {
+      show(getIsp(res.org))
     })
-  })
+    .fail(() => {
+      show({ id: "unknown", details: isps.unknown })
+    })
 })
