@@ -140,7 +140,7 @@ var isps = {
     ]
   },
   unknown: {
-    name: "ISP",
+    name: "internet",
     color: "000000",
     identifiers: [ ]
   }
