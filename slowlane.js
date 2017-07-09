@@ -179,6 +179,8 @@ var show = isp => {
     $(".slowlane, .packages").hide()
     $(".fightforthenet").show()
   })
+
+  $(".cta").one("click", close)
 }
 
 var close = () => parent.postMessage("slowlane-close", "*")

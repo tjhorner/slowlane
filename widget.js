@@ -20,8 +20,10 @@ if((!seen && today.getFullYear() === jul12.getFullYear() &&
   iframe.style.zIndex = 9999
 
   window.addEventListener("message", e => {
-    if(e.data === "slowlane-close") document.getElementById("slowlane-notice").style.display = "none"
-    document.cookie = "slowlane_seen=1"
+    if(e.data === "slowlane-close"){
+      document.getElementById("slowlane-notice").style.display = "none"
+      document.cookie = "slowlane_seen=1"
+    }
   })
 
   document.body.appendChild(iframe)
