@@ -4,7 +4,7 @@ Slowlane is a simple script that imitates a (what could be in the future)
 ISP "package upgrade" page. This was made for the Battle for the Net July 12th
 protest. It adapts to the user's ISP, if possible. ([demo!](https://tjhorner.com/slowlane/))
 
-Inspired by [btfn-widget](https://github.com/fightforthefuture/battleforthenet-widget).
+Inspired by [bftn-widget](https://github.com/fightforthefuture/battleforthenet-widget).
 
 ![](https://i.imgur.com/QZQYDsT.png)
 
