@@ -186,10 +186,7 @@ var show = isp => {
 var close = () => parent.postMessage("slowlane-close", "*")
 
 $(document).ready(() => {
-  // this domain is a proxy for ipinfo.io! (just a CNAME entry)
-  // some ad blockers block it, so we use this
-  // to get around it.
-  $.getJSON("https://ipinfo.horner.tj/")
+  $.getJSON("https://ipinfo.io/")
     .done(res => {
       show(getIsp(res.org))
     })
